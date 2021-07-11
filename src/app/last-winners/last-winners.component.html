@@ -1,0 +1,16 @@
+<div class="layout">
+    <section *ngFor="let campeonato of campeonatos">
+        <div class="etiqueta">
+            <h1>{{campeonato.year}}</h1>
+            <h2>{{campeonato.champion | uppercase}}</h2>
+        </div>
+        <div class="containerImg"><a href="{{campeonato.championUrl}}"><img src="{{campeonato.imageUrl}}" /></a></div>
+        <div class="containerBP">
+            <h3>Best Players</h3>
+            <ul *ngFor="let bestplayer of campeonato.bestPlayers">
+                <li>{{bestplayer }}</li>
+            </ul>
+        </div>
+    </section>
+
+</div>
